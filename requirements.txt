@@ -36,3 +36,5 @@ git+https://github.com/python-telegram-bot/ptbcontrib.git
 gitpython
 cloudscraper
 jikanpy
+flask
+flask_restful
