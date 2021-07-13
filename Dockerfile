@@ -63,7 +63,7 @@ RUN apt update && apt upgrade -y && \
 RUN pip3 install --upgrade pip setuptools
 
 # Cloning the repo
-RUN git clone https://github.com/rshero/YuiiChan /root/yui
+RUN git clone -b fly.io https://github.com/yayanksenpai/YuiiChan /root/yui
 WORKDIR /root/yui
 
 ENV PATH="/root/bot/bin:$PATH"
@@ -72,4 +72,4 @@ ENV PATH="/root/bot/bin:$PATH"
 RUN pip3 install -U -r requirements.txt
 
 # Starting Worker
-CMD ["python3","-m","tg_bot"]
+CMD ["bash","start.sh"]
